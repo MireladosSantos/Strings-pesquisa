@@ -1,0 +1,76 @@
+/* Paleta de Cores (Revisada):
+Azul Profundo: #0A1931
+Azul Celeste Brilhante: #18A5FF
+Dourado Suave: #FFD700
+Cinza Claro: #E0E0E0
+Branco Puro: #FFFFFF
+*/
+
+/* Importa a fonte 'Montserrat' para títulos e 'Poppins' para textos */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+  --cor-destaque: #18A5FF; /* Azul celeste */
+  --cor-fundo: #0A1931; /* Azul profundo */
+  --cor-dourado: #FFD700; /* Dourado suave */
+  --cor-texto-claro: #E0E0E0;
+  --cor-texto-escuro: #0A1931;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Adicionado para um melhor controle do layout */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, var(--cor-fundo), var(--cor-destaque), var(--cor-dourado), var(--cor-fundo));
+  background-size: 400% 400%;
+  animation: backgroundAnimation 20s ease infinite;
+  flex-direction: column;
+  padding: 20px;
+}
+
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 900px; /* Limita a largura para melhor leitura */
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 40px;
+  background: rgba(10, 25, 49, 0.85); /* Fundo semi-transparente */
+  border-radius: 25px; /* Borda mais arredondada */
+  box-shadow: 0 8px 32px 0 rgba(0, 0,
+}
+#botao-palavrachave {
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--cor-dourado);
+  color: var(--cor-texto-escuro);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+#botao-palavrachave:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  box-shadow: 0 6px 20px rgba(24, 165, 255, 0.6);
+  transform: translateY(-3px);
+}
